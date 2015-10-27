@@ -5,11 +5,30 @@
 //"http-server -p 8000"
 // Declare app level module which depends on filters, and services
 angular.module('readingList', [])
-
   .controller('ReadingListController', function(){
     this.books = books;
     this.genres = genres;
   })
+  .directive('bookGenres', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/book-genres.html'
+    }
+  })
+  .directive('bookCover',function(){
+    return {
+      restrict:'E',
+      templateUrl:'partials/book-cover.html',
+      replace: 'true'
+    }
+  })
+  .directive('reviewForm',function(){
+    return {
+      restrict:'E',
+      templateUrl:'partials/review-form.html',
+      replace: 'true'
+    }
+  });
 
 var genres = [ 'fable', 'fantasy', 'fiction', 'folklore', 'horror', 'humor', 'legend', 'metafiction', 'mystery', 'mythology', 'non-fiction', 'poetry' ];
 
