@@ -19,7 +19,11 @@ angular.module('readingList', [])
     return {
       restrict:'E',
       templateUrl:'partials/book-cover.html',
-      replace: 'true'
+      replace: 'true',
+      controller: function(){
+        this.showForm = false;
+      },
+      controllerAs: 'reviewFormCtrl'
     }
   })
   .directive('reviewForm',function(){
