@@ -2,9 +2,15 @@
 
 <div class="row" ng-controller = "ReadingListController as readingListCtrl">
 
-  <button class="btn btn-default">Create Review</button>
+  <button class="btn btn-default" ng-click="reviewFormCtrl.showForm =
+  !reviewFormCtrl.showForm">{{reviewFormCtrl.showForm ? "Cancel" :"Create a Review"}}</button>
+  <!--
+    En la linea anterior le estoy diciendo a ng-click que sea igual al opuesto de lo que es.
+    Así se logra el toggle.
+    Lo que viene después se llama ternary. Es una forma de escribir if en javascirpt.
+  -->
   <hr />
-    <review-form ng-show="reviewFormCtrl.showForm"></review-form>
+    <review-form  ng-show="reviewFormCtrl.showForm"></review-form>
   <hr />
 
   <ul class="list-unstyled col-sm-8">
