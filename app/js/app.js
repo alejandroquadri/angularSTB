@@ -69,7 +69,7 @@ var books = [
     author: 'Brandon J Hansen',
     isbn: '1489522212',
     review: 'A is for Array is the ABC book for future programmers. Filled with fun illustrations and simple real-world examples, my children loved seeing my world intertwined with theirs!',
-    rating: 4,
+    rating: 2,
     genres: { fiction: true }
   },{
     title: 'The Dragon Reborn',
